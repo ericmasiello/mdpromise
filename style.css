@@ -20,6 +20,11 @@ Version: 0.0.1
 
 /* ================================================== COMMON STYLES */
 
+html {
+
+	font-size: 16px;
+}
+
 /* == font and links == */
 body { font-family: 'Open Sans Condensed', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 28px; color: #777; -ms-word-wrap: break-word; word-wrap: break-word; }
 a { -webkit-transition: 0.2s ease-in-out all; -moz-transition: 0.2s ease-in-out all; -o-transition: 0.2s ease-in-out all; transition: 0.2s ease-in-out all; }
@@ -143,7 +148,7 @@ table > colgroup + thead > tr:first-child > td, table > thead:first-child > tr:f
 /* == END functional menu == */
 
 /* == dropdown-menu kustom style == */
-.k-main-navig { margin-top: 55px; line-height: 20px; }
+.k-main-navig { margin: auto; line-height: 20px; }
 .k-dropdown-menu { background: none; text-align: left; }
 .k-dropdown-menu .k-item-desc { display: block; font-size: 12px; font-weight: 300; }
 .k-dropdown-menu, .k-dropdown-menu ul { -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
@@ -1027,7 +1032,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge { backgroun
 @media (min-width: 992px) and (max-width: 1199px) {
 	#k-head { margin-bottom: 20px; }
 	#k-site-logo { display: block; float: none !important; margin-right: 0; }
-	.k-main-navig { margin-top: 30px; }
+	.k-main-navig {  }
 	#drop-down-left a { border-top: none; padding-top: 0 !important; }
 	#drop-down-left > li { margin-left: 30px; }
 	#drop-down-left > li:first-child { margin-left: 0; }
@@ -1041,7 +1046,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge { backgroun
 @media (min-width: 768px) and (max-width: 991px) {
 	#k-head { margin-bottom: 20px; }
 	#k-site-logo { display: block; float: none !important; margin-right: 0; }
-	.k-main-navig { margin-top: 30px; }
+	.k-main-navig {  }
 	#drop-down-left a { border-top: none; padding-top: 0 !important; }
 	#drop-down-left .k-item-desc { display: none; }	
 	#drop-down-left > li { margin-left: 30px; }
@@ -1064,4 +1069,20 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge { backgroun
 h1, h2, h3, h4 {
 
 	font-weight: 700;
+}
+
+.site-title {
+
+	display: inline-block;
+}
+
+.site-title > a[rel="home"] {
+
+	background: url('public/img/MDPromise.svg') no-repeat 0 0 transparent;
+	background-size: cover;
+	display: inline-block;
+	text-indent: -9999px;
+	height: 63px;
+	width: 255px;
+
 }
