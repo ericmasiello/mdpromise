@@ -8,6 +8,7 @@
     
     </div><!-- content wrapper end -->
 
+    <?php if( function_exists( 'dynamic_sidebar' ) && ( dynamic_sidebar( __( 'Footer Column Left', 'kazaz' ) ) || dynamic_sidebar( __( 'Footer Column Middle', 'kazaz' ) ) || dynamic_sidebar( __( 'Footer Column Right', 'kazaz' ) ) ) ) : ?>
     <div id="k-footer"><!-- footer -->
     
     	<div class="container"><!-- container -->
@@ -20,7 +21,7 @@
                     
                         <ul class="list-unstyled clear-margins"><!-- widgets -->
                         
-							<?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Column Left', 'kazaz' ) ) ) : ?><?php endif; ?> 
+							<?php if( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar( __( 'Footer Column Left', 'kazaz' ) ) ) : ?><?php endif; ?>
                             
                         </ul><!-- widgets end -->
                          
@@ -61,6 +62,7 @@
         </div><!-- container end -->
     
     </div><!-- footer end -->
+    <?php endif; ?>
     
     <div id="k-subfooter"><!-- subfooter -->
     

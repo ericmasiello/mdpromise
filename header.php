@@ -31,11 +31,11 @@
         ?>
     </div>
     
-    <header id="k-head" class="container  col-padded"><!-- container + head wrapper -->
+    <header id="k-head" class="container  site-header"><!-- container + head wrapper -->
 
 
         <div class="row">
-            <h1 class="site-title  col-xs-12  col-md  middle-xs">
+            <h1 class="site-title  col-xs-12  col-sm-4">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                     <?php bloginfo( 'name' ); ?>
                 </a>
@@ -43,7 +43,7 @@
 
                 <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
             </h1>
-            <div class="col-md  middle-md">
+            <div class="col-xs-12  col-sm-8  end-sm">
                 <?php
                     // theme's main navigation
                     if( has_nav_menu( 'primary' ) ) : k_navig_head(); endif;
@@ -52,9 +52,6 @@
         </div>
 
         <?php /* commenting out search form for now ... */ //include_once "inc/search.php"; ?>
-
-
-
 
 
     
