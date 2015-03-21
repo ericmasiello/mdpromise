@@ -21,8 +21,8 @@
 .container-fluid {
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 2rem;
-	padding-left: 2rem;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 .row {
@@ -43,8 +43,8 @@
 	-webkit-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	margin-right: -0.5rem;
-	margin-left: -0.5rem;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 .flexbox .row:before {
@@ -114,8 +114,8 @@
 	-webkit-flex-shrink: 0;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
-	padding-right: 0.5rem;
-	padding-left: 0.5rem;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 .col-xs {
@@ -380,8 +380,8 @@
 		-webkit-flex-shrink: 0;
 		-ms-flex-negative: 0;
 		flex-shrink: 0;
-		padding-right: 0.5rem;
-		padding-left: 0.5rem;
+		padding-right: 0;
+		padding-left: 0;
 	}
 
 	.col-sm {
@@ -647,8 +647,8 @@
 		-webkit-flex-shrink: 0;
 		-ms-flex-negative: 0;
 		flex-shrink: 0;
-		padding-right: 0.5rem;
-		padding-left: 0.5rem;
+		padding-right: 0;;
+		padding-left: 0;;
 	}
 
 	.col-md {
@@ -914,8 +914,8 @@
 		-webkit-flex-shrink: 0;
 		-ms-flex-negative: 0;
 		flex-shrink: 0;
-		padding-right: 0.5rem;
-		padding-left: 0.5rem;
+		padding-right: 0;;
+		padding-left: 0;;
 	}
 
 	.col-lg {

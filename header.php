@@ -31,10 +31,10 @@
         ?>
     </div>
     
-    <header id="k-head" class="container"><!-- container + head wrapper -->
+    <header id="k-head" class="container  col-padded"><!-- container + head wrapper -->
 
 
-        <div class="row  col-padded">
+        <div class="row">
             <h1 class="site-title  col-xs-12  col-md  middle-xs">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                     <?php bloginfo( 'name' ); ?>
