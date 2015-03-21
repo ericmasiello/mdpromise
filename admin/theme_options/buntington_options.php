@@ -853,20 +853,6 @@ return array(
 					'name' => 'copyright_text',
 					'description' => __('Enter copyright information here!', 'kazaz'),
 					'fields' => array(
-					    array(
-                            'type' => 'textbox',
-                            'name' => 'theme_contact_phone',
-                            'label' => __('Footer contact phone', 'kazaz'),
-                            'description' => __('Your contact phone number will show up in theme\'s post-footer.', 'kazaz'),
-                            'default' => '',
-                        ),
-                        array(
-                            'type' => 'textbox',
-                            'name' => 'theme_contact_email',
-                            'label' => __('Footer contact email', 'kazaz'),
-                            'description' => __('Your contact email address will show up in theme\'s post-footer.', 'kazaz'),
-                            'default' => '',
-                        ),
 						array(
 							'type' => 'textarea',
 							'name' => 'theme_copyright',

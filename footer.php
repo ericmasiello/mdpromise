@@ -76,7 +76,7 @@
 
         	            <p><?php bloginfo( 'name' ); ?>: <?php bloginfo( 'description' ); ?></p>
 
-        	            <p>Phone: <?php echo vp_option( 'vpt_option.theme_contact_phone' ); ?> or <?php echo vp_option( 'vpt_option.theme_contact_email' ); ?></p>
+        	            <p>Phone: <?php echo vp_option( 'vpt_option.contact_phone_1' ); ?> or <?php echo vp_option( 'vpt_option.contact_email' ); ?></p>
 
                         <p class="copy-text"><?php echo vp_option( 'vpt_option.theme_copyright' ); ?></p>
 
