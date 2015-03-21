@@ -31,10 +31,10 @@
         ?>
     </div>
     
-    <div id="k-head" class="container"><!-- container + head wrapper -->
+    <header id="k-head" class="container"><!-- container + head wrapper -->
 
 
-        <div class="row">
+        <div class="row  col-padded">
             <h1 class="site-title  col-xs-12  col-md  middle-xs">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                     <?php bloginfo( 'name' ); ?>
@@ -43,7 +43,7 @@
 
                 <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
             </h1>
-            <div class="col-md  middle-xs">
+            <div class="col-md  middle-md">
                 <?php
                     // theme's main navigation
                     if( has_nav_menu( 'primary' ) ) : k_navig_head(); endif;
@@ -58,7 +58,7 @@
 
 
     
-    </div><!-- container + head wrapper end -->
+    </header><!-- container + head wrapper end -->
     
     <div id="k-body"><!-- content wrapper -->
     
