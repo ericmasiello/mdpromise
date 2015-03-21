@@ -11,7 +11,7 @@ get_header();
 
     <div class="row no-gutter fullwidth"><!-- row -->
         
-        <div class="col-lg-12 col-md-12"><!-- doc body wrapper -->
+        <div class="col-lg-12 col-md-12 nopad-xs"><!-- doc body wrapper -->
         	
             <div id="post-<?php the_ID(); ?>" <?php post_class( 'col-padded' ); ?>><!-- inner custom column -->
 				

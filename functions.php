@@ -142,7 +142,7 @@ add_action( 'after_setup_theme', 'k_theme_setup' );
  */
 function k_styles_and_scripts() {
 	/* Stylesheets */
-	wp_enqueue_style( 'bootstrapcss', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', false, null );
+	wp_enqueue_style( 'bootstrapcss', get_template_directory_uri() . '/bootstrap/css/bootstrap.css', false, null );
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', false, null );
 	wp_enqueue_style( 'dropdowncss', get_template_directory_uri() . '/js/dropdown-menu/dropdown-menu.css', false, null );
 	wp_enqueue_style( 'swipeboxcss', get_template_directory_uri() . '/js/swipebox/css/swipebox.min.css', false, null );
