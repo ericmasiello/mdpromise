@@ -1,0 +1,34 @@
+body {
+
+	/*max-width: 320px;*/
+}
+
+h1, h2, h3, h4 {
+
+	font-weight: 700;
+}
+
+.site-title {
+
+	display: inline-block;
+	margin: 0;
+}
+
+.site-title > a[rel="home"] {
+
+	background: url('../public/img/MDPromise.svg') no-repeat 0 0 transparent;
+	background-size: contain;
+	display: block;
+	text-indent: -9999px;
+	height: 48px;
+	/*max-width: 255px;*/
+	width: 190px;
+}
+
+.page-footer {
+
+	border-top: 1px solid #C6C6C5;
+	color: #777;
+	font-size: 14px;
+	line-height: 20px;
+}
