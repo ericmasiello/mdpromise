@@ -31,19 +31,19 @@
         ?>
     </div>
     
-    <header id="k-head" class="container"><!-- container + head wrapper -->
+    <header id="k-head" class="container  site-header"><!-- container + head wrapper -->
 
 
         <div class="row  col-padded">
-            <h1 class="site-title  col-xs-12  col-md  middle-xs">
+            <h1 class="site-title  col-xs-12  col-sm-4">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                     <?php bloginfo( 'name' ); ?>
                 </a>
-                <small class="site-title-tagline hide-sm hide-xs"><?php bloginfo( 'description' ); ?></small>
+                <small class="site-title-tagline sr-only"><?php bloginfo( 'description' ); ?></small>
 
                 <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
             </h1>
-            <div class="col-md  middle-md">
+            <div class="col-xs-12 col-sm-8 end-sm">
                 <?php
                     // theme's main navigation
                     if( has_nav_menu( 'primary' ) ) : k_navig_head(); endif;

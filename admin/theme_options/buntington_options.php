@@ -856,9 +856,9 @@ return array(
 						array(
 							'type' => 'textarea',
 							'name' => 'theme_copyright',
-							'label' => __('Footer copyrights', 'kazaz'),
-							'description' => __('Your copyrights tagline will show up in theme\'s post-footer.', 'kazaz'),
-							'default' => '&copy; 2015 Sofarider Inc. All rights reserved. WordPress theme by Dameer DJ.',
+							'label' => __('Footer message', 'kazaz'),
+							'description' => __('Your message will show up in theme\'s post-footer.', 'kazaz'),
+							'default' => '',
 						),
 					),
 				),

@@ -1,0 +1,59 @@
+body {
+
+	/*max-width: 320px;*/
+}
+
+ul, ol {
+
+	padding-left: 20px;
+	padding-left: 1rem;
+}
+
+.site-header, .site-footer {
+
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.site-footer {
+
+	border-top: 1px solid #C6C6C5;
+	color: #555;
+	font-size: 14px;
+	font-size: .875rem;
+}
+
+@media only screen and (min-width: 75em) {
+
+	.site-header, .site-footer {
+
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+
+.site-title {
+
+	display: inline-block;
+	margin: 0;
+}
+
+.site-title > a[rel="home"] {
+
+	background: url('../public/img/MDPromise.svg') no-repeat 0 0 transparent;
+	background-size: contain;
+	display: block;
+	text-indent: -9999px;
+	height: 48px;
+	/*max-width: 255px;*/
+	width: 190px;
+}
+
+@media only screen and (min-width: 75em) {
+
+	.site-title > a[rel="home"] {
+
+		height: 76px;
+		width: 300px;
+	}
+}

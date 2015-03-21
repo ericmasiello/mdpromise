@@ -25,6 +25,12 @@
 	padding-left: 2rem;
 }
 
+.container {
+
+	width: 100%;
+	max-width: 1200px;
+}
+
 .row {
 	box-sizing: border-box;
 	display: -webkit-box;
@@ -330,9 +336,6 @@
 }
 
 @media only screen and (min-width: 48em) {
-	.container {
-		width: 46rem;
-	}
 
 	.col-sm,
 	.col-sm-1,
@@ -597,9 +600,6 @@
 }
 
 @media only screen and (min-width: 62em) {
-	.container {
-		width: 61rem;
-	}
 
 	.col-md,
 	.col-md-1,
@@ -864,9 +864,6 @@
 }
 
 @media only screen and (min-width: 75em) {
-	.container {
-		width: 71rem;
-	}
 
 	.col-lg,
 	.col-lg-1,
