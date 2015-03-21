@@ -43,7 +43,7 @@ body {
 	word-wrap: break-word;
 }
 a { -webkit-transition: 0.2s ease-in-out all; -moz-transition: 0.2s ease-in-out all; -o-transition: 0.2s ease-in-out all; transition: 0.2s ease-in-out all; }
-a:link, a:visited { color: #ea5644; text-decoration: none; }
+a:link, a:visited { color: #ea5644; }
 a:hover, a:focus { color: #111; outline: none; }
 a.moretag { font-size: 12px; text-transform: uppercase; }
 /* == END font and links == */
@@ -194,15 +194,28 @@ table > colgroup + thead > tr:first-child > td, table > thead:first-child > tr:f
 .k-dropdown-menu li:hover, .k-dropdown-menu li.dropdown-menu-hover { background-color: transparent; }
 .k-dropdown-menu ul li:hover, .k-dropdown-menu ul li.dropdown-menu-hover { background-color: transparent; }
 /* main links */
-#drop-down-left > li:not(:first-child) { margin-left: 50px; }
+#drop-down-left > li:not(:first-child) { margin-left: 35px; }
 
 #drop-down-left a {
 
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 900;
 	padding: 20px 0 10px !important;
 	border-left: none;
 	border-right: none;
 	transition: all .25s;
 }
+
+@media only screen and (min-width: 62em) {
+
+	#drop-down-left a {
+
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
 #drop-down-left .k-item-desc {
 
 }

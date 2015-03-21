@@ -27,6 +27,7 @@
 
 .container {
 
+	width: 100%;
 	max-width: 1200px;
 }
 
@@ -335,9 +336,6 @@
 }
 
 @media only screen and (min-width: 48em) {
-	.container {
-		width: 46rem;
-	}
 
 	.col-sm,
 	.col-sm-1,
@@ -602,9 +600,6 @@
 }
 
 @media only screen and (min-width: 62em) {
-	.container {
-		width: 61rem;
-	}
 
 	.col-md,
 	.col-md-1,
@@ -869,9 +864,6 @@
 }
 
 @media only screen and (min-width: 75em) {
-	.container {
-		width: 71rem;
-	}
 
 	.col-lg,
 	.col-lg-1,
