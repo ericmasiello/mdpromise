@@ -28,7 +28,7 @@ get_header();
 			    
 				<?php } ?>
 				
-				<h1 class="page-title"><?php the_title(); ?></h1>
+				<h1 class="page-title  sr-only"><?php the_title(); ?></h1>
 				
 				<div class="news-body">
 					<?php the_content(); ?>

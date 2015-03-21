@@ -31,7 +31,7 @@
         ?>
     </div>
     
-    <header id="k-head" class="container"><!-- container + head wrapper -->
+    <header id="k-head" class="container  site-header"><!-- container + head wrapper -->
 
 
         <div class="row  col-padded">

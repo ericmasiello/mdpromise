@@ -25,6 +25,11 @@
 	padding-left: 2rem;
 }
 
+.container {
+
+	max-width: 100%;
+}
+
 .row {
 	box-sizing: border-box;
 	display: -webkit-box;
