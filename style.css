@@ -216,14 +216,13 @@ table > colgroup + thead > tr:first-child > td, table > thead:first-child > tr:f
 	}
 }
 /* drops */
-#drop-down-left ul { background: none; border: none; }
+#drop-down-left ul { background: none; }
 #drop-down-left ul a {
 	font-size: 14px;
 	font-size: 0.875rem;
 	padding: 10px 15px !important;
 	border-top: none;
 	border-bottom: none;
-	border-left: 1px solid #CCC;
 }
 #drop-down-left ul .dropdown-menu-sub-indicator:after { content: ""; display: block; position: absolute; top: 50%; margin-top: -6px; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 6px solid #CCC; }
 #drop-down-left a:hover, #drop-down-left li.dropdown-menu-hover > a, #drop-down-left li.current-menu-item > a { color: #ea5644; background-color: #FFF; }
@@ -267,11 +266,11 @@ span.alter-menu-icon { display: block; width: 24px; height: 24px; background: ur
 	right: 1rem;
 }
 
-#navigation-mobile a:hover {
+#navigation-mobile a:hover,
+.k-main-navig .sub-menu a:hover{
 
-	background-color: #eee;
+	background-color: #eee !important;
 }
-
 
 .sub-menu {
 
@@ -279,11 +278,7 @@ span.alter-menu-icon { display: block; width: 24px; height: 24px; background: ur
 	list-style-position: inside;
 	padding-left: 0;
 
-	/*border: 1px solid rgba(0, 0, 0, 0.15);
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);*/
-	/*list-style: none outside none;
-	margin-top: 10px;
-	padding-left: 20px;*/
+
 }
 
 .sub-menu li {
@@ -293,6 +288,15 @@ span.alter-menu-icon { display: block; width: 24px; height: 24px; background: ur
 .sub-menu .sub-menu li {
 	font-weight: 300;
 	font-size: 12px;
+}
+
+/* Sub menus for non-mobile nav */
+
+
+.k-main-navig .sub-menu {
+
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 
 #navigation-mobile li a { display: block; }
