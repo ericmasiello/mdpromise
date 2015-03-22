@@ -40,13 +40,30 @@ ul, ol {
 
 .site-title > a[rel="home"] {
 
-	background: url('../public/img/MDPromise.svg') no-repeat 0 0 transparent;
+	background: url('../public/img/MDPromise.svg') no-repeat 0 center transparent;
 	background-size: contain;
 	display: block;
 	text-indent: -9999px;
 	height: 48px;
-	/*max-width: 255px;*/
-	width: 190px;
+	width: 170px;
+}
+
+@media only screen and (min-width: 55em) {
+
+	.site-title > a[rel="home"] {
+
+		height: 55px;
+		width: 200px;
+	}
+}
+
+@media only screen and (min-width: 65em) {
+
+	.site-title > a[rel="home"] {
+
+		height: 60px;
+		width: 250px;
+	}
 }
 
 @media only screen and (min-width: 75em) {
