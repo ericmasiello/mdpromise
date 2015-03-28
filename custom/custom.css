@@ -79,3 +79,47 @@ ul, ol {
 		width: 300px;
 	}
 }
+
+.page-list {
+
+	list-style-type: none;
+	padding: 0;
+}
+
+.page-list li,
+.page-list .children li {
+
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-left: 1px solid #ccc;
+}
+
+.page-list .children {
+
+	margin-left: 16px;
+	margin-left: 1rem;
+}
+
+.page-list > li:first-child {
+
+	padding-left: 0;
+	border-left: none;
+}
+
+.page-list li, .page-list .children {
+
+	display: inline-block;
+}
+
+#drop-down-left .current_page_item.current_page_item > a,
+.current_page_item > a {
+
+	color: #555 !important;
+}
+
+.page-list .current_page_item > a {
+
+	font-weight: normal;
+}

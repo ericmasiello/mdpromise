@@ -100,22 +100,24 @@ if( isset( $_POST[ 'submitted' ] ) ) {
 get_header();
 ?>
 
-<?php
-// sidebar
-$sidebar_class = '';
-$sidebar_pos = vp_option( 'vpt_option.sidebar_position' );
-if( $sidebar_pos == 'left' ) $sidebar_class = ' col-lg-push-4 col-md-push-4';
-?>
 
-	<div class="row no-gutter"><!-- row -->
+	<div class="row no-gutter fullwidth"><!-- row -->
 
-		<div class="col-lg-8 col-md-8<?php echo $sidebar_class; ?>"><!-- doc body wrapper -->
+		<div class="col-lg-12 col-md-12"><!-- doc body wrapper -->
 		
 			<div class="col-padded"><!-- inner custom column -->
 			
 				<div class="row gutter"><!-- row -->
 	
 					<div class="col-lg-12 col-md-12">
+
+					<?php if( has_post_thumbnail() ) { ?>
+
+                        <figure class="news-featured-image">
+                            <?php the_post_thumbnail(); ?>
+                        </figure>
+
+                    <?php } ?>
 					
 						<?php 
 						// show the map?
@@ -148,8 +150,9 @@ if( $sidebar_pos == 'left' ) $sidebar_class = ' col-lg-push-4 col-md-push-4';
 						?>
 						
 						<h1 class="page-title"><?php the_title(); ?></h1>
+						<?php include("inc/subnav.php"); ?>
 						
-						<div id="post-<?php the_ID(); ?>" <?php post_class( 'news-body' ); ?>>
+						<div id="post-<?php the_ID(); ?>" <?php post_class( 'news-body  clearfix' ); ?>>
 						
 							<?php the_content(); // template content ?>
 							
@@ -221,7 +224,7 @@ if( $sidebar_pos == 'left' ) $sidebar_class = ' col-lg-push-4 col-md-push-4';
 					
 					                <div class="form-group clearfix col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right remove-margin-bottom">
 					                    <input type="hidden" name="submitted" id="submitted" value="true" />
-					                    <input type="submit" value="<?php _e( 'Send Message', 'kazaz' ); ?>" id="submit" name="submit" class="btn btn-default" />
+					                    <input type="submit" value="<?php _e( 'Submit', 'kazaz' ); ?>" id="submit" name="submit" class="btn btn-default" />
 					                </div>
 					            </div><!-- ends row -->
 					        </form>
@@ -245,18 +248,7 @@ if( $sidebar_pos == 'left' ) $sidebar_class = ' col-lg-push-4 col-md-push-4';
 			</div><!-- inner custom column end -->
 			
 		</div><!-- doc body wrapper end -->
-			
-		<?php
-		// print sidebar wrappers - open
-		k_sidebar_head();
-		
-		// print sidebar content
-		get_template_part( 'sidebars/sidebar-contact' );
-		
-		// print sidebar wrappers - close
-		k_sidebar_foot();
-		?>
-		
+
 	</div><!-- row end -->
 
 <?php
