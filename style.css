@@ -828,7 +828,7 @@ td#next { text-align: right; padding: 5% 2%; }
 .page .news-stacked { margin-top: 40px; }
 .page .news-stacked .news-summary p { font-size: inherit; }
 .news-mini-wrap .page-title { font-size: 18px; line-height: 22px; }
-.news-featured-image { margin-bottom: 20px; border-bottom: 10px solid rgba( 0, 0, 0, 0.05 ); }
+.news-featured-image { margin-bottom: 20px; }
 .news-mini-wrap .news-featured-image { margin-bottom: 15px; }
 .news-meta { margin-top: 5px; }
 .news-meta span { display: inline-block; font-size: 12px; font-weight: 400; line-height: 18px; }
