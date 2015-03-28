@@ -67,19 +67,11 @@
 	left: 0;
 }
 
-.k-dropdown-menu > li:last-child ul {
-
-	left: auto;
-	right: -9999px;
-}
-
 .k-dropdown-menu > li:last-child ul.show-menu {
 
 	left: auto;
 	right: 0;
 }
-
-
 
 .k-dropdown-menu ul ul {
     top: 0;
