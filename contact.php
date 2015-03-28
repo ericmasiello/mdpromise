@@ -70,11 +70,8 @@ if( isset( $_POST[ 'submitted' ] ) ) {
 			$subject = __( 'Contact Form Submission from ', 'kazaz' ) . $name;
 			$body = "$sName: $name \n\n$sEmail: $email \n\n$sComments: \n$comments";
 			$headers = 'From: My Site <' . $emailTo . '>' . "\r\n" . 'Reply-To: ' . $email;
-			
-			wp_mail( $emailTo, $subject, $body, $headers );
 
-			$emailSent = true;
-
+			$emailSent = wp_mail( $emailTo, $subject, $body, $headers, '' );
 		}
 	/* } */
 } 
@@ -215,7 +212,7 @@ get_header();
                                         </a>
                                     </div>
 
-                                </div> <!-- /.row
+                                </div> <!-- /.row -->
 
 					        <?php endif; ?>
 							

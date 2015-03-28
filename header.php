@@ -4,7 +4,10 @@
  */
 ?>
 <!DOCTYPE html>
-<!--[if gt IE 8]><html class="no-js ie9-plus" <?php language_attributes(); ?>><![endif]-->
+<!--[if gt IE 8]><html class="no-js ie9-plus  lte-ie11  lte-ie10  lte-ie9  lte-ie8" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 9]><html class="no-js ie9-plus  lte-ie11  lte-ie10  lte-ie9" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 10]><html class="no-js ie9-plus  lte-ie11  lte-ie10" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 11]><html class="no-js ie9-plus  lte-ie11" <?php language_attributes(); ?>><![endif]-->
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
