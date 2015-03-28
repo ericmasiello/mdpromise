@@ -26,6 +26,8 @@ ul, ol {
 	color: #555;
 	font-size: 14px;
 	font-size: .875rem;
+	margin-top: 30px;
+	margin-top: 1.875rem;
 }
 
 @media only screen and (min-width: 75em) {
@@ -84,6 +86,8 @@ ul, ol {
 
 	list-style-type: none;
 	padding: 0;
+	margin-bottom: 30px;
+	margin-bottom: 1.875rem;
 }
 
 .page-list li,
@@ -122,4 +126,10 @@ ul, ol {
 .page-list .current_page_item > a {
 
 	font-weight: normal;
+}
+
+.form-control {
+
+	font-size: 16px;
+	font-size: 1rem;
 }

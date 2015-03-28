@@ -37,20 +37,6 @@ if( isset( $_POST[ 'submitted' ] ) ) {
 			$email = trim( $_POST[ 'email' ] );
 		}
 		
-		// msg subject
-		if( trim( $_POST[ 'msgSubject' ] ) === '' ) {
-			$msgSubject = __( 'Not provided', 'kazaz' );
-		} else {
-			$msgSubject = trim( $_POST[ 'msgSubject' ] );
-		}
-		
-		// phone
-		if( trim( $_POST[ 'phone' ] ) === '' ) {
-			$phone = __( 'Not provided', 'kazaz' );
-		} else {
-			$phone = trim( $_POST[ 'phone' ] );
-		}
-		
 		// spam
 		if( trim( $_POST[ 'spam' ] ) === '' ) {
 			$spamError = __( 'Wrong result!', 'kazaz' );
@@ -79,11 +65,10 @@ if( isset( $_POST[ 'submitted' ] ) ) {
 			$sEmail = __( 'Email', 'kazaz' );
 			$sComments = __( 'Message', 'kazaz' );
 			$sSubject = __( 'Message Subject', 'kazaz' );
-			$sPhone = __( 'Phone/Cell', 'kazaz' );
 
 			$emailTo = esc_attr( vp_option( 'vpt_option.contact_email' ) );
 			$subject = __( 'Contact Form Submission from ', 'kazaz' ) . $name;
-			$body = "$sName: $name \n\n$sEmail: $email \n\n$sPhone: $phone \n\n$sSubject: $msgSubject \n\n$sComments: \n$comments";
+			$body = "$sName: $name \n\n$sEmail: $email \n\n$sComments: \n$comments";
 			$headers = 'From: My Site <' . $emailTo . '>' . "\r\n" . 'Reply-To: ' . $email;
 			
 			wp_mail( $emailTo, $subject, $body, $headers );
@@ -155,8 +140,6 @@ get_header();
 						<div id="post-<?php the_ID(); ?>" <?php post_class( 'news-body  clearfix' ); ?>>
 						
 							<?php the_content(); // template content ?>
-							
-					        <h6><?php _e( 'Drop us Note', 'kazaz' ); // contact form title ?></h6>
 					        
 					        <?php 
 					        // something went wrong
@@ -177,58 +160,63 @@ get_header();
 					        <p class="text-info"><?php _e( 'Your message was sent successfully. We will get in touch with you shortly.', 'kazaz' ); ?></p>
 					            
 					        <?php else : ?>
-					
-					        <form id="contactform" method="post" action="<?php the_permalink(); ?>#post-<?php the_ID(); ?>">
-					            <div class="row"><!-- starts row -->
-					                <div class="form-group col-lg-6 col-md-6 col-sm-12<?php if( $nameError != '' ) echo ' has-error'; ?>">
-					                    <label for="contactName"><span class="required">*</span> <?php _e( 'Name', 'kazaz' ); ?></label>
-					                    <input type="text" aria-required="true" size="30" value="<?php if( isset( $_POST[ 'contactName' ] ) ) echo $_POST[ 'contactName' ]; ?>" name="contactName" id="contactName" class="form-control requiredField" />
-					                    <?php if( $nameError != '' ) : ?><p class="help-block"><?php echo $nameError; ?></p><?php endif; ?>
-					                </div>
-					                <div class="form-group col-lg-6 col-md-6 col-sm-12<?php if( $emailError != '' ) echo ' has-error'; ?>">
-					                    <label for="email"><span class="required">*</span> <?php _e( 'Email', 'kazaz' ); ?></label>
-					                    <input type="text" aria-required="true" size="30" value="<?php if( isset( $_POST[ 'email' ] ) ) echo $_POST[ 'email' ]; ?>" name="email" id="email" class="form-control requiredField" />
-					                    <?php if( $emailError != '' ) : ?><p class="help-block"><?php echo $emailError; ?></p><?php endif; ?>
-					                </div>
-					            </div><!-- ends row -->
-					            
-					            <div class="row"><!-- starts row -->
-					                <div class="form-group col-lg-6 col-md-6 col-sm-12">
-					                    <label for="phone"><?php _e( 'Phone/Cell', 'kazaz' ); ?></label>
-					                    <input type="text" aria-required="true" size="30" value="<?php if( isset( $_POST[ 'phone' ] ) ) echo $_POST[ 'phone' ]; ?>" name="phone" id="phone" class="form-control" />
-					                </div>
-					                <div class="form-group col-lg-6 col-md-6 col-sm-12">
-					                    <label for="msgSubject"><?php _e( 'Message Subject', 'kazaz' ); ?></label>
-					                    <input type="text" aria-required="true" size="30" value="<?php if( isset( $_POST[ 'msgSubject' ] ) ) echo $_POST[ 'msgSubject' ]; ?>" name="msgSubject" id="msgSubject" class="form-control" />
-					                </div>
-					            </div><!-- ends row -->
-					            
-					            <div class="row"><!-- starts row -->
-					                <div class="form-group clearfix col-lg-12<?php if( $commentError != '' ) echo ' has-error'; ?>">
-					                    <label for="comments"><span class="required">*</span> <?php _e( 'Message', 'kazaz' ); ?></label>
-					                    <textarea aria-required="true" rows="5" cols="45" name="comments" id="comments" class="form-control requiredField mezage"><?php if( isset( $_POST[ 'comments' ] ) ) { if( function_exists( 'stripslashes' ) ) { echo stripslashes( $_POST[ 'comments' ] ); } else { echo $_POST[ 'comments' ]; } } ?></textarea>
-					                    <?php if( $commentError != '' ) : ?><p class="help-block"><?php echo $commentError; ?></p><?php endif; ?>
-					                </div>
 
-                                    <div class="form-group clearfix col-lg-6 col-md-6 col-sm-6 col-xs-6 remove-margin-bottom<?php if( $spamError != '' ) echo ' has-error'; ?>">
-                                    	<?php
-										$spamX = rand( 1, 10 );
-										$spamY = rand( 1, 10 );
-										?>
-                                        <input type="hidden" name="spamX" id="spamX" value="<?php echo $spamX; ?>" />
-                                        <input type="hidden" name="spamY" id="spamY" value="<?php echo $spamY; ?>" />
-					                    <label for="spam" id="spam-label"><span class="required">*</span> <?php echo __( 'Enter result', 'kazaz' ) . ': ' . $spamX . '+' . $spamY . ' = '; ?></label>
-                                        <input type="text" aria-required="true" size="5" value="<?php if( isset( $_POST[ 'spam' ] ) ) echo $_POST[ 'spam' ]; ?>" name="spam" id="spam" class="form-control requiredField" />
-                                        <?php if( $spamError != '' ) : ?><p class="help-block"><?php echo $spamError; ?></p><?php endif; ?>
-					                </div>
-					
-					                <div class="form-group clearfix col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right remove-margin-bottom">
-					                    <input type="hidden" name="submitted" id="submitted" value="true" />
-					                    <input type="submit" value="<?php _e( 'Submit', 'kazaz' ); ?>" id="submit" name="submit" class="btn btn-default" />
-					                </div>
-					            </div><!-- ends row -->
-					        </form>
-					        
+                                <div class="row  fullwidth">
+
+                                    <div class="col-xs-12  col-md-9">
+
+                                        <form id="contactform" method="post" action="<?php the_permalink(); ?>#post-<?php the_ID(); ?>">
+
+                                            <div class="form-group<?php if( $nameError != '' ) echo ' has-error'; ?>">
+                                                <label for="contactName"><?php _e( 'Name', 'kazaz' ); ?></label>
+                                                <input type="text" aria-required="true" size="30" value="<?php if( isset( $_POST[ 'contactName' ] ) ) echo $_POST[ 'contactName' ]; ?>" name="contactName" id="contactName" class="form-control requiredField" />
+                                                <?php if( $nameError != '' ) : ?><p class="help-block"><?php echo $nameError; ?></p><?php endif; ?>
+                                            </div>
+
+                                            <div class="form-group <?php if( $emailError != '' ) echo ' has-error'; ?>">
+                                                <label for="email"><?php _e( 'Email', 'kazaz' ); ?></label>
+                                                <input type="text" aria-required="true" size="30" value="<?php if( isset( $_POST[ 'email' ] ) ) echo $_POST[ 'email' ]; ?>" name="email" id="email" class="form-control requiredField" />
+                                                <?php if( $emailError != '' ) : ?><p class="help-block"><?php echo $emailError; ?></p><?php endif; ?>
+                                            </div>
+
+                                            <div class="form-group clearfix <?php if( $commentError != '' ) echo ' has-error'; ?>">
+                                                <label for="comments"><?php _e( 'Message', 'kazaz' ); ?></label>
+                                                <textarea aria-required="true" rows="5" cols="45" name="comments" id="comments" class="form-control requiredField mezage"><?php if( isset( $_POST[ 'comments' ] ) ) { if( function_exists( 'stripslashes' ) ) { echo stripslashes( $_POST[ 'comments' ] ); } else { echo $_POST[ 'comments' ]; } } ?></textarea>
+                                                <?php if( $commentError != '' ) : ?><p class="help-block"><?php echo $commentError; ?></p><?php endif; ?>
+                                            </div>
+
+                                            <div class="form-group clearfix<?php if( $spamError != '' ) echo ' has-error'; ?>">
+                                                <?php
+                                                $spamX = rand( 1, 10 );
+                                                $spamY = rand( 1, 10 );
+                                                ?>
+                                                <input type="hidden" name="spamX" id="spamX" value="<?php echo $spamX; ?>" />
+                                                <input type="hidden" name="spamY" id="spamY" value="<?php echo $spamY; ?>" />
+                                                <label for="spam" id="spam-label"><?php echo __( 'Enter result', 'kazaz' ) . ': ' . $spamX . '+' . $spamY . ' = '; ?></label>
+                                                <input type="text" aria-required="true" size="5" value="<?php if( isset( $_POST[ 'spam' ] ) ) echo $_POST[ 'spam' ]; ?>" name="spam" id="spam" class="form-control requiredField" />
+                                                <?php if( $spamError != '' ) : ?><p class="help-block"><?php echo $spamError; ?></p><?php endif; ?>
+                                            </div>
+
+                                            <div class="form-group clearfix">
+                                                <input type="hidden" name="submitted" id="submitted" value="true" />
+                                                <input type="submit" value="<?php _e( 'Submit', 'kazaz' ); ?>" id="submit" name="submit" class="btn btn-primary btn-lg" />
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+                                    <div class="col-xs-12  col-md-3">
+                                        <?php
+                                        $contactPhone = esc_attr( vp_option( 'vpt_option.contact_phone_1' ) );
+                                        $contactEmail = esc_attr( vp_option( 'vpt_option.contact_email' ) );
+                                        ?>
+                                        <a href="mailto:<?php echo $contactEmail;?>">
+                                            <img src="<?php bloginfo('stylesheet_directory'); ?>/public/img/CallOrEmail.png" alt="Call <?php echo $contactPhone; ?> or email <?php echo $contactEmail; ?>">
+                                        </a>
+                                    </div>
+
+                                </div> <!-- /.row
+
 					        <?php endif; ?>
 							
 						</div>
