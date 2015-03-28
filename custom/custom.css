@@ -3,6 +3,11 @@ body {
 	/*max-width: 320px;*/
 }
 
+a:focus {
+
+	outline: 1px dotted;
+}
+
 ul, ol {
 
 	padding-left: 20px;

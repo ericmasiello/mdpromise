@@ -51,11 +51,6 @@
         </div>
 
         <?php /* commenting out search form for now ... */ //include_once "inc/search.php"; ?>
-
-
-
-
-
     
     </header><!-- container + head wrapper end -->
     
