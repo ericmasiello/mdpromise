@@ -1,8 +1,3 @@
-body {
-
-	/*max-width: 320px;*/
-}
-
 a:focus {
 
 	outline: 1px dotted;
@@ -26,8 +21,8 @@ ul, ol {
 	color: #555;
 	font-size: 14px;
 	font-size: .875rem;
-	margin-top: 30px;
-	margin-top: 1.875rem;
+	margin-top: 90px;
+	margin-top: 5.625rem;
 }
 
 @media only screen and (min-width: 75em) {
