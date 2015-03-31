@@ -178,3 +178,52 @@ ul, ol {
 
 	background-position-y: 0;
 }
+
+.call-to-action-container {
+
+	position: relative;
+	text-align: center;
+}
+
+.call-to-action-btn > img{
+
+	display: inline-block;
+	max-width: 100%;
+	width: 140px;
+	width: 8.75rem;
+	margin: 20px auto;
+	margin: 1.26rem auto;
+}
+
+.call-to-action-btn > img:hover {
+
+	transform: none;
+}
+
+@media only screen and (min-width: 41em) {
+
+	.call-to-action-btn {
+
+		position: absolute;
+		bottom: 10px;
+		bottom: .626rem;
+		right: 10px;
+		right: .625rem;
+	}
+
+	.call-to-action-btn img {
+
+		margin: 0;
+	}
+}
+
+@media only screen and (min-width: 53em) {
+
+	.call-to-action-btn {
+
+		bottom: 20px;
+		bottom: 1.25rem;
+		right: 20px;
+		right: 1.25rem;
+	}
+}
