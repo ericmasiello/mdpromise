@@ -842,9 +842,15 @@ return array(
 					'description' => __('Upload photo that will be shown whenever page not found.', 'kazaz'),
 					'fields' => array(
 						array(
+							'type' => 'upload',
+							'name' => 'call_to_action_image',
+							'label' => __('Upload Call to Action image', 'kazaz'),
+							'description' => __('This is the image that will appear beside your featured image in the page template "Call to Action".', 'kazaz'),
+						),
+						array(
 							'type' => 'textbox',
 							'name' => 'call_to_action_text',
-							'label' => __('Text (alt text if used with image)', 'kazaz'),
+							'label' => __('Alt text used with image', 'kazaz'),
 							'default' => __('Join Us', 'kazaz'),
 						),
 						array(
@@ -852,12 +858,6 @@ return array(
 							'name' => 'call_to_action_url',
 							'label' => __('Call to action URL', 'kazaz'),
 							'default' => __('http://', 'kazaz'),
-						),
-						array(
-							'type' => 'upload',
-							'name' => 'call_to_action_image',
-							'label' => __('Upload Call to Action image', 'kazaz'),
-							'description' => __('This is the image that will appear beside your featured image in the page template "Call to Action".', 'kazaz'),
 						)
 					),
 				),

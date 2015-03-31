@@ -23,6 +23,7 @@ get_header();
 				<?php if( has_post_thumbnail() ) { ?>
 
 			    <figure class="news-featured-image  call-to-action-container">
+
 			    	<?php the_post_thumbnail(); ?>
 
 			    	<?php if( vp_option( 'vpt_option.call_to_action_image' ) ) : ?>
