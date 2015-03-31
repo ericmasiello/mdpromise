@@ -15,20 +15,21 @@ return array(
 					'title' => __('Upload site logo &amp; favicon', 'kazaz'),
 					'name' => 'section_site_logo_upload',
 					'fields' => array(
-						array(
+						/*array(
 							'type' => 'upload',
 							'name' => 'site_logo_upload',
 							'label' => __('Browse to your own logo', 'kazaz'),
-						),
+						),*/
 						array(
 							'type' => 'upload',
 							'name' => 'site_logo_favicon',
 							'label' => __('Browse to favicon.ico', 'kazaz'),
-						),
+						)
 					),
 				),	
 				/* site logo & favicon end */
 				/* content font-family */
+				/*
 				array(
 					'type' => 'section',
 					'title' => __('Font family - Content', 'kazaz'),
@@ -119,9 +120,10 @@ return array(
 							),
 						),
 					),
-				),
+				),*/
 				/* content font-family end */
 				/* titles font-family */
+				/*
 				array(
 					'type' => 'section',
 					'title' => __('Font family - Titles', 'kazaz'),
@@ -213,6 +215,7 @@ return array(
 						),
 					),
 				),
+				*/
 				/* titles font-family end */
 				/* links color */
 				array(
@@ -584,7 +587,7 @@ return array(
 			'icon' => 'font-awesome:fa fa-envelope',
 			'controls' => array(
 				/* google maps starts */
-				array(
+				/*array(
 					'type' => 'section',
 					'title' => __('Google Maps', 'kazaz'),
 					'name' => 'google_maps_settings',
@@ -652,7 +655,7 @@ return array(
 							),
 						),
 					),
-				),
+				),*/
 				/* google maps ends */
 				/* personal contact starts */
 				array(
@@ -667,6 +670,7 @@ return array(
 							'label' => __('Company or private name', 'kazaz'),
 							'default' => 'Buntington Schools',
 						),
+						/*
 						array(
 							'type' => 'textbox',
 							'name' => 'contact_address',
@@ -696,13 +700,13 @@ return array(
 							'name' => 'contact_country',
 							'label' => __('Residence Country', 'kazaz'),
 							'default' => 'USA',
-						),
+						),*/
 						array(
 							'type' => 'textbox',
 							'name' => 'contact_phone_1',
 							'label' => __('Contact phone 1', 'kazaz'),
 							'default' => '(123) 456-7890',
-						),
+						),/*
 						array(
 							'type' => 'textbox',
 							'name' => 'contact_phone_2',
@@ -715,7 +719,7 @@ return array(
 							'label' => __('Email address', 'kazaz'),
 							'description' => __('BEWARE: This email address will also be used to receive Contact-form inquiries!', 'kazaz'),
 							'default' => 'info@buntington.com',
-						),
+						),*/
 					),
 				),
 				/* personal contact ends */
@@ -830,6 +834,33 @@ return array(
 					),
 				),
 				/* sidebar position end */
+				/* error page image starts */
+				array(
+					'type' => 'section',
+					'title' => __('Call to Action', 'kazaz'),
+					'name' => 'call_to_action',
+					'description' => __('Upload photo that will be shown whenever page not found.', 'kazaz'),
+					'fields' => array(
+						array(
+							'type' => 'textbox',
+							'name' => 'call_to_action_text',
+							'label' => __('Text (alt text if used with image)', 'kazaz'),
+							'default' => __('Join Us', 'kazaz'),
+						),
+						array(
+							'type' => 'textbox',
+							'name' => 'call_to_action_url',
+							'label' => __('Call to action URL', 'kazaz'),
+							'default' => __('http://', 'kazaz'),
+						),
+						array(
+							'type' => 'upload',
+							'name' => 'call_to_action_image',
+							'label' => __('Upload Call to Action image', 'kazaz'),
+							'description' => __('This is the image that will appear beside your featured image in the page template "Call to Action".', 'kazaz'),
+						)
+					),
+				),
 				/* error page image starts */
 				array(
 					'type' => 'section',
