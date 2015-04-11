@@ -227,3 +227,22 @@ ul, ol {
 		right: 1.25rem;
 	}
 }
+
+/*
+ * Skip Nav
+ */
+
+#skip-navigation {
+	padding: 1em;
+	position: absolute;
+	top: -40px;
+	left: 1em;
+	z-index: 1000;
+	transition: top .3s ease-in-out;
+}
+
+#skip-navigation:focus {
+	position: absolute;
+	top: 40px;
+	background: #FFF;
+}

@@ -121,7 +121,7 @@ function k_theme_setup() {
 	// register navigation
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'kazaz' ), 
-		'functional' => __( 'Functional Menu', 'kazaz' ),
+		'footer' => __( 'Footer Menu', 'kazaz' ),
 	) );
 
 	// custom image size

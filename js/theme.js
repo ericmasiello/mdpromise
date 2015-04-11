@@ -38,7 +38,8 @@
 	}
 	CHEF.listenerMenu = function() {
 		$( '#mobile-nav-switch' ).on( 'click', function(e) {
-			$( this ).toggleClass( 'open' );
+			var $this = $(this);
+			$this.toggleClass( 'open' ).attr('aria-expanded', $this.hasClass( 'open').toString() );
 			$( 'nav#navigation-mobile' ).stop().slideToggle( 'fast' );
 			e.preventDefault();
 		} );

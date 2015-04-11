@@ -5,6 +5,7 @@
 function k_sidebars_init() {
 	
 	/* Legal Sidebars */
+
 	register_sidebar( array(
 		'name' => __( 'Sidebar Index', 'kazaz' ),
 		'id' => 'sidebar-widgets-index',
@@ -179,4 +180,4 @@ function k_sidebars_init() {
 	) );
 	
 }
-add_action( 'widgets_init', 'k_sidebars_init' );
+//add_action( 'widgets_init', 'k_sidebars_init' );
