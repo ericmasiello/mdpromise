@@ -23,18 +23,13 @@
 
 <body <?php body_class(); ?>>
 
+    <a id="skip-navigation" href="#k-body">Skip Navigation</a>
+
     <!-- device test, don't remove. javascript needed! -->
     <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
     <!-- device test end -->
-    
-    <div id="k-functional-wrap">
-		<?php 
-		// theme's functional navigation
-		if( has_nav_menu( 'functional' ) ) : k_navig_functional(); endif;
-        ?>
-    </div>
-    
-    <header id="k-head" class="container  site-header"><!-- container + head wrapper -->
+
+    <header id="k-head" class="container site-header" role="banner"><!-- container + head wrapper -->
 
         <div class="row  col-padded">
             <h1 class="site-title  col-xs-12  col-sm-4">
@@ -43,7 +38,10 @@
                 </a>
                 <small class="site-title-tagline sr-only"><?php bloginfo( 'description' ); ?></small>
 
-                <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
+                <a id="mobile-nav-switch" href="#navigation-mobile" title="Navigation menu"
+                    aria-label="Navigation menu" role="button" aria-controls="navigation-mobile" aria-expanded="false">
+                    <span class="alter-menu-icon"></span>
+                </a><!-- alternative menu button -->
             </h1>
             <div class="col-xs-12 col-sm-8 end-sm">
                 <?php
@@ -57,7 +55,7 @@
     
     </header><!-- container + head wrapper end -->
     
-    <div id="k-body"><!-- content wrapper -->
+    <div id="k-body" role="main"><!-- content wrapper -->
     
     	<div class="container"><!-- container -->
         
