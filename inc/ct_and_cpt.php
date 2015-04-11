@@ -286,7 +286,7 @@ function k_custom_tax_cpt() {
 	// content chunks end
 	
 }
-add_action( 'init', 'k_custom_tax_cpt' );
+//add_action( 'init', 'k_custom_tax_cpt' );
 
 /* ------------------------------------------------------ */
 /* We will need to add custom columns to our CTs as well! */

@@ -56,10 +56,23 @@
     list-style: none;
 }
 .k-dropdown-menu ul {
-    display: none;
+    /*display: none;*/
+		left: -9999px;
     position: absolute;
     z-index: 1000000;
 }
+
+.k-dropdown-menu ul.show-menu {
+
+	left: 0;
+}
+
+.k-dropdown-menu > li:last-child ul.show-menu {
+
+	left: auto;
+	right: 0;
+}
+
 .k-dropdown-menu ul ul {
     top: 0;
     left: 100%;
@@ -68,6 +81,7 @@
     margin: 0;
     padding: 0;
     display: inline-block;
+	position: relative;
     /* IE7 inline-block and padding fix */
     *display: inline;
     *zoom: 1;

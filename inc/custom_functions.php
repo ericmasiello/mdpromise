@@ -67,14 +67,13 @@ add_action( 'wp_enqueue_scripts', 'k_google_fonts_url' );
 /** 
  * Functional and Main navigation 
  */
-if( !function_exists( 'k_navig_functional' ) ) {
+if( !function_exists( 'k_navig_footer' ) ) {
 	/**
 	 * prints Functional menu
 	 */
-	function k_navig_functional() {
-		echo '<nav class="k-functional-navig">';
-		wp_nav_menu( array( 'menu_class' => 'list-inline pull-right', 'theme_location' => 'functional' ) );
-		echo '</nav>';
+	function k_navig_footer() {
+
+		wp_nav_menu( array( 'menu_class' => 'list-inline small', 'theme_location' => 'footer' ) );
 	}
 }
 
@@ -83,7 +82,7 @@ if( !function_exists( 'k_navig_head' ) ) {
 	 * prints Main menu (drop-down)
 	 */
 	function k_navig_head() {
-		echo '<nav id="k-menu" class="k-main-navig">';
+		echo '<nav id="k-menu" class="k-main-navig" role="navigation">';
 		wp_nav_menu( array( 'menu_id' => 'drop-down-left', 'menu_class' => 'k-dropdown-menu', 'theme_location' => 'primary' ) );
 		echo '</nav>';
 	}

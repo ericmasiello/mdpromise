@@ -4,101 +4,58 @@
  */
 ?>
 <!DOCTYPE html>
-<!--[if gt IE 8]><html class="no-js ie9-plus" <?php language_attributes(); ?>><![endif]-->
+<!--[if gt IE 8]><html class="no-js ie9-plus  lte-ie11  lte-ie10  lte-ie9  lte-ie8" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 9]><html class="no-js ie9-plus  lte-ie11  lte-ie10  lte-ie9" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 10]><html class="no-js ie9-plus  lte-ie11  lte-ie10" <?php language_attributes(); ?>><![endif]-->
+<!--[if IE 11]><html class="no-js ie9-plus  lte-ie11" <?php language_attributes(); ?>><![endif]-->
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="shortcut icon" href="<?php echo vp_option( 'vpt_option.site_logo_favicon' ); ?>">
+    <script src="<?php echo get_bloginfo('template_directory'); ?>/custom/modernizr.custom.js"></script>
     <?php wp_head(); ?>	
 </head>
 
 <body <?php body_class(); ?>>
 
+    <a id="skip-navigation" href="#k-body">Skip Navigation</a>
+
     <!-- device test, don't remove. javascript needed! -->
     <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
     <!-- device test end -->
+
+    <header id="k-head" class="container site-header" role="banner"><!-- container + head wrapper -->
+
+        <div class="row  col-padded">
+            <h1 class="site-title  col-xs-12  col-sm-4">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                    <?php bloginfo( 'name' ); ?>
+                </a>
+                <small class="site-title-tagline sr-only"><?php bloginfo( 'description' ); ?></small>
+
+                <a id="mobile-nav-switch" href="#navigation-mobile" title="Navigation menu"
+                    aria-label="Navigation menu" role="button" aria-controls="navigation-mobile" aria-expanded="false">
+                    <span class="alter-menu-icon"></span>
+                </a><!-- alternative menu button -->
+            </h1>
+            <div class="col-xs-12 col-sm-8 end-sm">
+                <?php
+                    // theme's main navigation
+                    if( has_nav_menu( 'primary' ) ) : k_navig_head(); endif;
+                ?>
+            </div>
+        </div>
+
+        <?php /* commenting out search form for now ... */ //include_once "inc/search.php"; ?>
     
-    <div id="k-functional-wrap">
-		<?php 
-		// theme's functional navigation
-		if( has_nav_menu( 'functional' ) ) : k_navig_functional(); endif;
-        ?>
-    </div>
+    </header><!-- container + head wrapper end -->
     
-    <div id="k-head" class="container"><!-- container + head wrapper -->
-    
-    	<div class="row"><!-- row -->
-        
-        	<div class="col-lg-12"><!-- column -->
-        	
-        		<?php $site_logo = vp_option( 'vpt_option.site_logo_upload' ); ?>
-        
-        		<div id="k-site-logo"<?php if( $site_logo ) { echo ' class="pull-left"'; } ?>><!-- site logo -->
-        		
-                    <?php if( $site_logo ) : ?>
-                
-                    <h1 class="k-logo">
-                    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                        	<img src="<?php echo $site_logo; ?>" alt="<?php _e( 'Site Logo', 'kazaz' ); ?>" />
-                        </a>
-                    </h1>
-                    
-                    <?php else : ?>
-                    
-                    <h1 class="site-title">
-                    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                    		<?php bloginfo( 'name' ); ?>
-                    	</a>
-                        <small class="site-title-tagline hide-sm hide-xs"><?php bloginfo( 'description' ); ?></small>
-                    </h1>
-                    
-                    <?php endif; ?>
-                    
-                    <a id="mobile-nav-switch" href="#drop-down-left"><span class="alter-menu-icon"></span></a><!-- alternative menu button -->
-            
-            	</div><!-- site logo end -->
-            	
-				<?php 
-				// theme's main navigation
-				if( has_nav_menu( 'primary' ) ) : k_navig_head(); endif;
-            	?>
-            
-            </div><!-- column end -->
-            
-        </div><!-- row end -->
-    
-    </div><!-- container + head wrapper end -->
-    
-    <div id="k-body"><!-- content wrapper -->
+    <div id="k-body" role="main"><!-- content wrapper -->
     
     	<div class="container"><!-- container -->
         
-        	<div class="row"><!-- row -->
-            
-                <div id="k-top-search" class="col-lg-12 clearfix"><!-- top search -->
-                
-                    <form action="<?php echo esc_url( home_url( '/' ) ); ?>" id="top-searchform" method="get" role="search">
-                        <div class="input-group">
-                            <input type="text" name="s" id="site-search" class="form-control" autocomplete="off" placeholder="<?php _e( 'Type in keyword(s) then hit Enter on keyboard', 'kazaz' ); ?>" />
-                        </div>
-                    </form>
-                    
-                    <div id="bt-toggle-search" class="search-icon text-center"><i class="s-open fa fa-search"></i><i class="s-close fa fa-times"></i></div><!-- toggle search button -->
-                
-                </div><!-- top search end -->
-            
-            	<div class="k-breadcrumbs col-lg-12 clearfix"><!-- breadcrumbs -->
-                
-                	<?php 
-					// k_breadcrumbs(); // old breadcrumbs
-					$bread_args = array( 'container' => 'div', 'separator' => ' &nbsp;|&nbsp; ', 'before' => '', 'after' => '', 'show_on_front' => false, 'network' => false, 'show_title' => true, 'show_browse' => false, 'echo' => true );
-					if( function_exists( 'breadcrumb_trail' ) ) breadcrumb_trail( $bread_args );
-					?>
-                    
-                </div><!-- breadcrumbs end -->
-                
-            </div><!-- row end -->

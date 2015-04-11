@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme's generic Page
+ * Template Name: No Title with Call To Action page
  */
 ?>
 
@@ -22,17 +22,23 @@ get_header();
 
 				<?php if( has_post_thumbnail() ) { ?>
 
-                    <figure class="news-featured-image">
-                        <?php the_post_thumbnail(); ?>
-                    </figure>
+			    <figure class="news-featured-image  call-to-action-container">
+
+			    	<?php the_post_thumbnail(); ?>
+
+			    	<?php if( vp_option( 'vpt_option.call_to_action_image' ) ) : ?>
+			    		<a href="<?php echo vp_option( 'vpt_option.call_to_action_url' ); ?>" class="call-to-action-btn">
+							<img src="<?php echo vp_option( 'vpt_option.call_to_action_image' ); ?>" alt="<?php _e( vp_option( 'vpt_option.call_to_action_text' ), 'kazaz' ); ?>" class="img-responsive" />
+						</a>
+					<?php endif; ?>
+
+			    </figure>
 
 				<?php } ?>
 
-				<h1 class="page-title"><?php the_title(); ?></h1>
-				<?php include("inc/subnav.php"); ?>
+				<h1 class="page-title  sr-only"><?php the_title(); ?></h1>
 
-
-				<div class="news-body  clearfix">
+				<div class="news-body">
 					<?php the_content(); ?>
 				</div>
 

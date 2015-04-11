@@ -5,10 +5,13 @@
 	
 	/* ---------- INIT MAIN NAVIG ---------- */
 	CHEF.initMainMenu = function() {
-		$( '#drop-down-left' ).dropdown_menu( {
-			open_delay : 50,
-			close_delay : 100
-		} );
+		//$( '#drop-down-left' ).dropdown_menu( {
+		//	open_delay : 50,
+		//	close_delay : 100
+		//} );
+
+    $('#drop-down-left').setup_navigation();
+
 		// handle main menu items tagline
 		if( $( '#drop-down-left' ).length ) {
 			jQuery( '#drop-down-left > li > a' ).each( function() {
@@ -35,7 +38,8 @@
 	}
 	CHEF.listenerMenu = function() {
 		$( '#mobile-nav-switch' ).on( 'click', function(e) {
-			$( this ).toggleClass( 'open' );
+			var $this = $(this);
+			$this.toggleClass( 'open' ).attr('aria-expanded', $this.hasClass( 'open').toString() );
 			$( 'nav#navigation-mobile' ).stop().slideToggle( 'fast' );
 			e.preventDefault();
 		} );

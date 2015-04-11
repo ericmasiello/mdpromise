@@ -49,8 +49,8 @@ $theme_options = new VP_Option(array(
 	'use_exim_menu'         => true,                                   // default to true, shows export import menu
 	'minimum_role'          => 'edit_theme_options',                   // default to 'edit_theme_options'
 	'layout'                => 'fixed',                                // fluid or fixed, default to fixed
-	'page_title'            => __( 'Buntington Options', 'kazaz' ),    // page title
-	'menu_label'            => __( 'Buntington Options', 'kazaz' ),    // menu label
+	'page_title'            => __( 'MD PROMISE Options', 'kazaz' ),    // page title
+	'menu_label'            => __( 'MD PROMISE Options', 'kazaz' ),    // menu label
 ));
 
 // regular shortocode template
@@ -121,7 +121,7 @@ function k_theme_setup() {
 	// register navigation
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'kazaz' ), 
-		'functional' => __( 'Functional Menu', 'kazaz' ),
+		'footer' => __( 'Footer Menu', 'kazaz' ),
 	) );
 
 	// custom image size
@@ -143,23 +143,28 @@ add_action( 'after_setup_theme', 'k_theme_setup' );
 function k_styles_and_scripts() {
 	/* Stylesheets */
 	wp_enqueue_style( 'bootstrapcss', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', false, null );
+	wp_enqueue_style( 'flexboxgrid', get_template_directory_uri() . '/custom/flexbox-grid.css', false, null );
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri() . '/font-awesome/css/font-awesome.min.css', false, null );
 	wp_enqueue_style( 'dropdowncss', get_template_directory_uri() . '/js/dropdown-menu/dropdown-menu.css', false, null );
 	wp_enqueue_style( 'swipeboxcss', get_template_directory_uri() . '/js/swipebox/css/swipebox.min.css', false, null );
 	wp_enqueue_style( 'audioplayercss', get_template_directory_uri() . '/js/audioplayer/audioplayer.css', false, null );
 	wp_enqueue_style( 'stylecss', get_stylesheet_directory_uri() . '/style.css', false, null );
+	wp_enqueue_style( 'customcss', get_template_directory_uri() . '/custom/custom.css', false, null );
 	/* Dynamic stylesheet */
 	wp_enqueue_style( 'dynamicstylesheet', home_url() . '/?dynamic_css=css', false, null );
 
-	/* Load required js */	
+	/* Load required js */
+	//modernizr.custom.js
+
 	wp_enqueue_script( 'bootstrapjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', array('jquery'), NULL, true );
-	wp_enqueue_script( 'dropdownjs', get_template_directory_uri() . '/js/dropdown-menu/dropdown-menu.js', array('jquery'), NULL, true );
+	//wp_enqueue_script( 'dropdownjs', get_template_directory_uri() . '/js/dropdown-menu/dropdown-menu.js', array('jquery'), NULL, true );
+	wp_enqueue_script( 'navigationjs', get_template_directory_uri() . '/custom/accessible-navigation.js', array('jquery'), NULL, true );
 	wp_enqueue_script( 'swipeboxjs', get_template_directory_uri() . '/js/swipebox/js/jquery.swipebox.min.js', array('jquery'), NULL, true );
 	wp_enqueue_script( 'fitvidsjs', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), NULL, true );
 	wp_enqueue_script( 'audioplayerjs', get_template_directory_uri() . '/js/audioplayer/audioplayer.min.js', array('jquery'), NULL, true );
 	wp_enqueue_script( 'easypiechartsjs', get_template_directory_uri() . '/js/jquery.easy-pie-chart.js', array('jquery'), NULL, true );
 	wp_enqueue_script( 'gmapsjs', 'https://maps.googleapis.com/maps/api/js?sensor=true', array('jquery'), NULL, true );
-	wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array('jquery'), NULL, true );
+	wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array('jquery', 'navigationjs'), NULL, true );
 
 	/* add support for threaded comments */
 	if( is_singular() && comments_open() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' );
@@ -239,3 +244,20 @@ require_once locate_template( '/inc/tinyMCE_stuff.php' );
  * Theme custom functions
  */
 require_once locate_template( '/inc/custom_functions.php' );
+
+/**
+ * Allow upload of SVG files
+ */
+add_filter('upload_mimes', 'custom_upload_mimes');
+
+function custom_upload_mimes ( $existing_mimes=array() ) {
+
+	// add the file extension to the array
+
+	$existing_mimes['svg'] = 'mime/type';
+
+        // call the modified list of extensions
+
+	return $existing_mimes;
+
+}
