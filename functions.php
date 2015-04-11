@@ -49,8 +49,8 @@ $theme_options = new VP_Option(array(
 	'use_exim_menu'         => true,                                   // default to true, shows export import menu
 	'minimum_role'          => 'edit_theme_options',                   // default to 'edit_theme_options'
 	'layout'                => 'fixed',                                // fluid or fixed, default to fixed
-	'page_title'            => __( 'Buntington Options', 'kazaz' ),    // page title
-	'menu_label'            => __( 'Buntington Options', 'kazaz' ),    // menu label
+	'page_title'            => __( 'MD PROMISE Options', 'kazaz' ),    // page title
+	'menu_label'            => __( 'MD PROMISE Options', 'kazaz' ),    // menu label
 ));
 
 // regular shortocode template

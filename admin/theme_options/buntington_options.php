@@ -1,6 +1,6 @@
 <?php
 return array(
-	'title' => __( 'Buntington Options', 'kazaz' ),
+	'title' => __( 'MD PROMISE Options', 'kazaz' ),
 	'logo' => get_template_directory_uri() . '/public/img/options_panel_icon.png',
 	'menus' => array(
 		/* basic options start */

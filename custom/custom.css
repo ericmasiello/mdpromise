@@ -246,3 +246,20 @@ ul, ol {
 	top: 40px;
 	background: #FFF;
 }
+
+/*
+ * Form Styles
+ */
+
+span.wpcf7-not-valid-tip {
+
+	color: #ED1C24;
+}
+
+div.wpcf7-response-output {
+
+	border-color: #FBC211;
+	margin: 0;
+	padding: 10px;
+	padding: .5rem;
+}
