@@ -195,6 +195,12 @@ ul, ol {
 	margin: 1.26rem auto;
 }
 
+.call-to-action-btn__text {
+
+	position: absolute;
+	left: -99999px;
+}
+
 .call-to-action-btn > img:hover {
 
 	transform: none;
@@ -235,7 +241,7 @@ ul, ol {
 #skip-navigation {
 	padding: 1em;
 	position: absolute;
-	top: -40px;
+	top: -20em;
 	left: 1em;
 	z-index: 1000;
 	transition: top .3s ease-in-out;
@@ -243,7 +249,7 @@ ul, ol {
 
 #skip-navigation:focus {
 	position: absolute;
-	top: 40px;
+	top: 20px;
 	background: #FFF;
 }
 

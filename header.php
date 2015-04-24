@@ -40,7 +40,7 @@
 
                 <a id="mobile-nav-switch" href="#navigation-mobile" title="Navigation menu"
                     aria-label="Navigation menu" role="button" aria-controls="navigation-mobile" aria-expanded="false">
-                    <span class="alter-menu-icon"></span>
+                    <span class="alter-menu-icon">Menu</span>
                 </a><!-- alternative menu button -->
             </h1>
             <div class="col-xs-12 col-sm-8 end-sm">

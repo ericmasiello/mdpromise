@@ -21,7 +21,7 @@
 
         	            <p><?php bloginfo( 'name' ); ?>: <?php bloginfo( 'description' ); ?></p>
 
-        	            <p>Phone: <a href="tel:<?php echo vp_option( 'vpt_option.contact_phone_1' ); ?>"><?php echo vp_option( 'vpt_option.contact_phone_1' ); ?></a> or
+        	            <p><a href="tel:<?php echo vp_option( 'vpt_option.contact_phone_1' ); ?>">(Phone) <?php echo vp_option( 'vpt_option.contact_phone_1' ); ?></a> or
 
         	            <a href="mailto:<?php echo get_option( 'admin_email' ); ?>"><?php echo get_option( 'admin_email' ); ?></a></p>
 
