@@ -269,3 +269,18 @@ div.wpcf7-response-output {
 	padding: 10px;
 	padding: .5rem;
 }
+
+/*
+ * Footer logos
+ */
+
+.footer-logo {
+
+	width: 112px;
+	width: 7rem;
+	height: auto;
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}

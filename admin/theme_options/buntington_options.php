@@ -839,7 +839,7 @@ return array(
 					'type' => 'section',
 					'title' => __('Call to Action', 'kazaz'),
 					'name' => 'call_to_action',
-					'description' => __('Upload photo that will be shown whenever page not found.', 'kazaz'),
+					'description' => __('Upload image used for call to action', 'kazaz'),
 					'fields' => array(
 						array(
 							'type' => 'upload',
@@ -861,6 +861,40 @@ return array(
 						)
 					),
 				),
+
+				array(
+					'type' => 'section',
+					'title' => __('Footer Logos', 'kazaz'),
+					'name' => 'footer_logos',
+					'description' => __('Upload images you want to appear in the footer.', 'kazaz'),
+					'fields' => array(
+						array(
+							'type' => 'upload',
+							'name' => 'footer_logo_1',
+							'label' => __('Footer Logo 1', 'kazaz'),
+							'description' => __('This image will appear in the footer.', 'kazaz'),
+						),
+						array(
+							'type' => 'textbox',
+							'name' => 'footer_logo_1_text',
+							'label' => __('Alt text used with image', 'kazaz'),
+							'default' => __('', 'kazaz'),
+						),
+						array(
+							'type' => 'upload',
+							'name' => 'footer_logo_2',
+							'label' => __('Footer Logo 2', 'kazaz'),
+							'description' => __('This image will appear in the footer.', 'kazaz'),
+						),
+						array(
+							'type' => 'textbox',
+							'name' => 'footer_logo_2_text',
+							'label' => __('Alt text used with image', 'kazaz'),
+							'default' => __('', 'kazaz'),
+						),
+					)
+				),
+
 				/* error page image starts */
 				array(
 					'type' => 'section',
