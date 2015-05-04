@@ -27,10 +27,28 @@
                         <?php if( vp_option( 'vpt_option.footer_logo_1' ) || vp_option( 'vpt_option.footer_logo_2' ) ) : ?>
                         <p>
                             <?php if( vp_option( 'vpt_option.footer_logo_1' ) ): ?>
-                                <img src="<?php echo vp_option( 'vpt_option.footer_logo_1' ); ?>" alt="<?php echo vp_option( 'vpt_option.footer_logo_1_text' ); ?>" class="footer-logo  footer-logo-1" />
+
+                                <object
+                                   type="image/svg+xml"
+                                   height="70"
+                                   width="150"
+                                   data="<?php echo vp_option( 'vpt_option.footer_logo_1' ); ?>"
+                                   class="footer-logo  footer-logo-1"
+                                   alt="<?php echo vp_option( 'vpt_option.footer_logo_1_text' ); ?>">
+                                   <img src="<?php echo vp_option( 'vpt_option.footer_logo_1' ); ?>" alt="<?php echo vp_option( 'vpt_option.footer_logo_1_text' ); ?>" class="footer-logo  footer-logo-1" />
+                                </object>
+
                             <?php endif; ?>
                             <?php if( vp_option( 'vpt_option.footer_logo_2' ) ): ?>
-                                <img src="<?php echo vp_option( 'vpt_option.footer_logo_2' ); ?>" alt="<?php echo vp_option( 'vpt_option.footer_logo_2_text' ); ?>" class="footer-logo  footer-logo-2" />
+                                <object
+                                   type="image/svg+xml"
+                                   height="70"
+                                   width="150"
+                                   data="<?php echo vp_option( 'vpt_option.footer_logo_2' ); ?>"
+                                   class="footer-logo  footer-logo-2"
+                                   alt="<?php echo vp_option( 'vpt_option.footer_logo_2_text' ); ?>">
+                                   <img src="<?php echo vp_option( 'vpt_option.footer_logo_2' ); ?>" alt="<?php echo vp_option( 'vpt_option.footer_logo_2_text' ); ?>" class="footer-logo  footer-logo-2" />
+                                </object>
                             <?php endif; ?>
                         </p>
                         <?php endif; ?>
