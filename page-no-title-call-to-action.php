@@ -28,7 +28,8 @@ get_header();
 
 			    	<?php if( vp_option( 'vpt_option.call_to_action_image' ) ) : ?>
 			    		<a href="<?php echo vp_option( 'vpt_option.call_to_action_url' ); ?>" class="call-to-action-btn">
-							<img src="<?php echo vp_option( 'vpt_option.call_to_action_image' ); ?>" alt="<?php _e( vp_option( 'vpt_option.call_to_action_text' ), 'kazaz' ); ?>" class="img-responsive" />
+							<span class="call-to-action-btn__text"><?php _e( vp_option( 'vpt_option.call_to_action_text' ), 'kazaz' ); ?></span>
+							<img src="<?php echo vp_option( 'vpt_option.call_to_action_image' ); ?>" alt="Image of button for call to action" class="img-responsive" />
 						</a>
 					<?php endif; ?>
 
