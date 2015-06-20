@@ -57,7 +57,7 @@
 
 
 
-                        <p class="copy-text"><?php echo vp_option( 'vpt_option.theme_copyright' ); ?></p>
+                        <small><?php echo vp_option( 'vpt_option.theme_copyright' ); ?></small>
 
                         <?php
                             // theme's functional navigation
